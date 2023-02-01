@@ -1,0 +1,33 @@
+package com.deloitee.abstraction.demo;
+
+public class Abstractclassdemo {
+public static void main(String[] args) {
+RBI icici = new ICICI();
+icici.calcintrest();
+icici.loanpolicy();
+
+RBI hdfc = new HDFC();
+hdfc.calcintrest();
+hdfc.loanpolicy();
+
+}
+}
+abstract class RBI{
+	public abstract void calcintrest();
+	public void loanpolicy() {
+		System.out.println("mandatory loan policy");
+	}
+	}
+class ICICI extends RBI{
+	@override
+	public void calcintrest() {
+		System.out.println("icici-intrest calculation()");
+	}
+}
+class HDFC extends RBI{
+	@override
+	public void calcintrest() {
+		System.out.println("hdfc intrest calculation");
+		}
+	
+}
